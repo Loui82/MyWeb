@@ -2,8 +2,47 @@
 <html>
 <head>
 	<title></title>
+
+	<link rel="stylesheet" href="styles.css">
+
 </head>
 <body >
-  <h1>Hello everybody</h1>
+	<div class="header">
+		<header><img src="/home/loui8/Desktop/MyWeb/hero-icon-17.jpg.png" alt="hero Icon" class="hero-icon" >
+    	<h1>ChatMan</h1>
+		</header>
+	</div>
+
+	<div class="navbar">
+  		<a >Register</a>
+  		<a onclick="openForm()">Login</a>
+	</div>
+
+	<div class="form-popup" id="PForm">
+  		<form action="#" class="form-container">
+    		<h1>Login</h1>
+
+    		<label for="email"><b>Email</b></label>
+    		<input type="text" placeholder="Enter Email" name="email" required>
+
+    		<label for="psw"><b>Password</b></label>
+    		<input type="password" placeholder="Enter Password" name="psw" required>
+
+    		<button type="submit" class="btn">Login</button>
+    		<button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  		</form>
+	</div>
+
+	<script>
+		function openForm() {
+    	document.getElementById("PForm").style.display = "block";
+		}
+
+		function closeForm() {
+    	document.getElementById("PForm").style.display = "none";
+		}
+	</script>
+
+    <h1>Hello everybody</h1>
 </body>
 </html>
